@@ -28,6 +28,7 @@ if(NOT TARGET yaml-cpp)
       DEPRECATION "The target yaml-cpp is deprecated and will be removed in version 0.10.0. Use the yaml-cpp::yaml-cpp target instead."
     )
   endif()
+  set_target_properties(yaml-cpp::yaml-cpp PROPERTIES use_merge_key ON)
 endif()
 
 check_required_components(yaml-cpp)
